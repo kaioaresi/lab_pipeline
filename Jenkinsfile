@@ -10,7 +10,7 @@ pipeline {
       steps {
         sh '''#docker stack deploy -c docker-compose.yml ${JOB_NAME}-QA
 
-echo $JOB_NAME'''
+echo $JOB_BASE_NAME'''
       }
     }
   }
