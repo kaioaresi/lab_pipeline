@@ -8,7 +8,9 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'docker stack deploy -c docker-compose.yml ${JOB_NAME}-QA'
+        sh '''#docker stack deploy -c docker-compose.yml ${JOB_NAME}-QA
+
+echo $JOB_NAME'''
       }
     }
   }
